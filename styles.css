@@ -4,9 +4,11 @@
   padding: 0;
 }
 
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: #f4f4f9;
+/* Home Page Styles */
+body.home-page {
+  font-family: Georgia, serif;
+  background-color: #121212; /* Dark, almost black background */
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,35 +18,94 @@ body {
 .container {
   text-align: center;
   padding: 20px;
-  max-width: 600px;
+  max-width: 700px;
   width: 100%;
 }
 
 .site-title-gif {
   max-width: 100%;
   height: auto;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
-.category-grid {
+/* Text links side-by-side in a row */
+.category-links {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.nav-button {
-  display: block;
-  padding: 15px 20px;
-  background-color: #ffffff;
-  color: #333333;
+.category-link {
+  color: #e63946; /* Warm red color */
   text-decoration: none;
-  border: 2px solid #333333;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: all 0.2s ease;
+  font-size: 1.2rem;
+  font-style: italic;
+  transition: opacity 0.2s ease;
 }
 
-.nav-button:hover {
-  background-color: #333333;
-  color: #ffffff;
+.category-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+/* Poems & Content Pages (White Background) */
+body.content-page {
+  font-family: Georgia, serif;
+  background-color: #ffffff;
+  color: #111111;
+  padding: 40px 20px;
+  line-height: 1.8;
+}
+
+.poem-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Back Link */
+.back-link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #e63946;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Poem Index List */
+.poem-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.poem-list li {
+  margin-bottom: 12px;
+}
+
+.poem-link {
+  color: #111111;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.poem-link:hover {
+  color: #e63946;
+}
+
+/* Single Poem Formatting */
+.poem-title {
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 25px;
+  font-weight: normal;
+}
+
+.poem-body {
+  white-space: pre-line; /* Preserves line breaks automatically */
+  font-size: 1.1rem;
 }
