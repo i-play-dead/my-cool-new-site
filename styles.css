@@ -50,9 +50,13 @@ body.home-page {
 }
 
 /* Poems & Content Pages (White Background) */
+/* Poems Page with Background Image */
 body.content-page {
   font-family: Georgia, serif;
-  background-color: #ffffff;
+  background-image: url('poems-bg.jpg'); /* Name of your image file */
+  background-size: cover;                /* Scale image to fill the screen */
+  background-position: center;           /* Keep image centered */
+  background-attachment: fixed;          /* Image stays still while scrolling */
   color: #111111;
   padding: 40px 20px;
   line-height: 1.8;
