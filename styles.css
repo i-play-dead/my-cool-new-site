@@ -1,76 +1,25 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Home Page Styles */
-body.home-page {
+/* Content Pages Base Setup */
+html, body.content-page {
   font-family: Georgia, serif;
-  background-color: #121212; /* Dark, almost black background */
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.container {
-  text-align: center;
-  padding: 20px;
-  max-width: 700px;
-  width: 100%;
-}
-
-.site-title-gif {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 25px;
-}
-
-/* Text links side-by-side in a row */
-.category-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.category-link {
-  color: #e63946; /* Warm red color */
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-style: italic;
-  transition: opacity 0.2s ease;
-}
-
-.category-link:hover {
-  opacity: 0.7;
-  text-decoration: underline;
-}
-
-/* Poems & Content Pages (White Background) */
-/* Poems Page with Background Image */
-body.content-page {
-  font-family: Georgia, serif;
-  background-image: url('poems-bg.jpg'); /* Name of your image file */
-  background-size: cover;                /* Scale image to fill the screen */
-  background-position: center;           /* Keep image centered */
-  background-attachment: fixed;          /* Image stays still while scrolling */
+  background-color: #ffffff;
   color: #111111;
-  padding: 40px 20px;
-  line-height: 1.8;
+  padding: 40px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-y: auto; /* Uses normal browser scrolling only if screen is tiny */
 }
 
+/* Container: Fits the screen width naturally */
 .poem-container {
-  max-width: 600px;
+  max-width: 90%; /* Allows poem lines to expand much wider */
+  width: max-content; /* Expands container to fit long lines without squishing */
   margin: 0 auto;
 }
 
 /* Back Link */
 .back-link {
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #e63946;
   text-decoration: none;
   font-size: 0.95rem;
@@ -80,28 +29,7 @@ body.content-page {
   text-decoration: underline;
 }
 
-/* Poem Index List */
-.poem-list {
-  list-style: none;
-  margin-top: 20px;
-}
-
-.poem-list li {
-  margin-bottom: 12px;
-}
-
-.poem-link {
-  color: #111111;
-  font-style: italic;
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-
-.poem-link:hover {
-  color: #e63946;
-}
-
-/* Single Poem Formatting */
+/* Poem Titles */
 .poem-title {
   font-size: 2rem;
   font-style: italic;
@@ -109,7 +37,10 @@ body.content-page {
   font-weight: normal;
 }
 
+/* Single Poem Formatting */
 .poem-body {
-  white-space: pre-line; /* Preserves line breaks automatically */
-  font-size: 1.1rem;
+  white-space: pre; /* Keeps line breaks AND prevents text wrapping to next line */
+  font-size: 1.15rem;
+  word-break: normal;
+  overflow: visible; /* Prevents inside scrollbars from showing up */
 }
